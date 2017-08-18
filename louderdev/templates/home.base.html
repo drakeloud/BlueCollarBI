@@ -1,0 +1,69 @@
+{% load staticfiles i18n %}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}bluecollarbi{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    {% comment %} <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> {% endcomment %}
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="{% static 'css/main.css' %}?v=1" rel="stylesheet">
+    {% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> {% endcomment %}
+    {% comment %} <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> {% endcomment %}
+    {% block head %}{% endblock %}
+  </head>
+	<body class="landing">
+		<div id="page-wrapper">
+        <header id="header">
+					<h1 id="logo" class="logoText"><a href="/" class="hoverRed"><span class="blueText">LOUD</span>ERdEV</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/home/services">Services</a></li>
+							<li>
+								<a href="#">Portfolio</a>
+								<ul>
+									<li><a href="/home/web-development">Web Development</a></li>
+									{% comment %}<li><a href="/home/cloud">Cloud</a></li>{% endcomment %}
+									<li><a href="/home/predictive-analytics">Predictive Analytics</a></li>
+									{% comment %}<li><a href="/home/data-visualization">Data Visualization</a></li> {% endcomment %}
+									<li><a href="/home/cyber-security">Cyber Security</a></li>
+									{% comment %}<li><a href="/home/automation">Automation</a></li>  {% endcomment %}
+								</ul>
+							</li>
+							{% comment %} <li><a href="/blog/index">Blog</a></li> {% endcomment %}
+							{% comment %}<li><a href="/login" class="button special">Login</a></li>{% endcomment %}
+						</ul>
+					</nav>
+				</header>
+		{% block body %}
+		{% endblock body %}
+
+    			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://twitter.com/DrakeLoud" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+						{% comment %} <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li> {% endcomment %}
+						<li><a href="https://www.linkedin.com/in/drakeloud/" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						{% comment %} <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li> {% endcomment %}
+						<li><a href="https://github.com/drakeloud" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						{% comment %} <li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li> {% endcomment %}
+					</ul>
+					<ul class="copyright">
+						<li>&copy; bluecollarbi. All rights reserved {% now "Y" %}.</li>
+					</ul>
+				</footer>
+      </div>
+			<script src="{% static 'js/jquery.min.js' %}"></script>
+			<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+			<script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'js/skel.min.js' %}"></script>
+			<script src="{% static 'js/util.js' %}"></script>
+			<script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

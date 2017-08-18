@@ -1,0 +1,116 @@
+{% extends 'home.base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block head %}
+
+{% endblock head %}
+
+{% block body %}
+
+<!-- Banner -->
+<section id="banner">
+	<div class="content">
+		<header>
+			<h2 class="logoText"><span class="blueText">LOUD</span>ERdEV</h2>
+			<p>Web Development and Tech Consulting Solutions <br />
+			Web dev. Cyber. Big data. Automation. </p>
+			<br />
+			<br />
+			<a href="#skills" class="button scrolly">Skills</a>
+		</header>
+		{% comment %}<span class="image"><img src="{% static 'images/computer.png' %}?v=1" alt="" /></span>{% endcomment %}
+	</div>
+	{% comment %}<a href="#one" class="goto-next scrolly">Next</a>{% endcomment %}
+	<a href="#skills" class="goto-next scrolly">Next</a>
+</section>
+
+<section id="skills" class="wrapper style1 special fade-up">
+	<div class="container">
+		<header class="major">
+			<h2>Skills and Services</h2>
+			{% comment %} <p>Technical skills and services</p> {% endcomment %}
+		</header>
+		<div class="box alt">
+			<div class="row uniform">
+				<section class="4u 6u(medium) 12u$(xsmall)">
+					<span class="icon alt major fa-desktop"></span>
+					<h3 class="blueText">Web Development</h3>
+					<p>Python Django and ASP.NET, including MVC architecture with the use of SQL or NoSQL implementations.</p>
+					<a href="/home/web-development.html" class="button">View More</a>
+				</section>
+				<section class="4u 6u$(medium) 12u$(xsmall)">
+					<span class="icon alt major fa-cloud"></span>
+					<h3 class="blueText">Cloud</h3>
+					<p>Cloud hosting, data storage, and cloud computing. Technologies include AWS and Azure.</p>
+					<a href="/home/cloud.html" class="button">View More</a>
+				</section>
+				<section class="4u$ 6u(medium) 12u$(xsmall)">
+					<span class="icon alt major fa-flask"></span>
+					<h3 class="blueText">Predictive Analytics</h3>
+					<p>Predictive analytics with R and Python, or using tools such as Azure Machine Learning Studio</p>
+					<a href="/home/predictive-analytics.html" class="button">View More</a>
+				</section>
+				<section class="4u 6u$(medium) 12u$(xsmall)">
+					<span class="icon alt major fa-area-chart"></span>
+					<h3 class="blueText">Data Visualization</h3>
+					<p>Creative Dashboard creation to visualize data to find insight from big data with R or tools such as Tableau or Power BI</p>
+					<a href="/home/data-visualization.html" class="button">View More</a>
+				</section>
+				<section class="4u 6u(medium) 12u$(xsmall)">
+					<span class="icon alt major fa-lock"></span>
+					<h3 class="blueText">Cyber Security</h3>
+					<p>Penetration testing and tools using Kali Linux and Metasploit. In addition, Cyber Security consulting of policies, practices, and procedures</p>
+					<a href="/home/cyber-security.html" class="button">View More</a>
+				</section>
+				<section class="4u$ 6u$(medium) 12u$(xsmall)">
+					<span class="icon alt major fa-keyboard-o"></span>
+					<h3 class="blueText">Automation</h3>
+					<p>Business process automation using Excel scripting (VBA) or ETL tools such as Power BI</p>
+					<a href="/home/automation.html" class="button">View More</a>
+				</section>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- One -->
+
+
+<section id="one" class="spotlight style1 bottom">
+	<span class="image fit main"><img src="{% static 'img/city.jpg' %}" alt="" /></span>
+	<div class="content">
+		<div class="container">
+			<div class="row">
+				<div class="12u 12u$(medium) centerText">
+					<h2>Tech Blog</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="12u 12u$(medium)">
+					<p class="centerText">Discussing upcoming technologies, trends, and ideas that are hitting the world. 
+						Topics may include anything from recent Cyber Security attacks, new trends in Big Data,
+						or my own opinions of new technologies that are being released. 
+					</p>
+					<p class="centerText"><a href="/blog/index.html" class="button showButton">Blog</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="wrapper styleBlue special fade">
+		<div class="container">
+			<header>
+				<h2>Contact me</h2>
+				<p>Interested in learning more? Send a hello here!</p>
+			</header>
+			{% comment %} <form method="post" action="#" class="container 50%"> {% endcomment %}
+			<form class="container 50%">
+				<div class="row uniform 50%">
+					<div class="8u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
+					<div class="4u$ 12u$(xsmall)"><input type="submit" value="Send" class="fit special" /></div>
+				</div>
+			</form>
+		</div>
+</section>
+
+{% endblock body %}

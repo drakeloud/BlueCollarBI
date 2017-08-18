@@ -1,0 +1,39 @@
+{% extends 'home.base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+
+
+{% block head %}
+<link href="{% static 'css/home.css' %}" rel="stylesheet">
+{% endblock head %}
+
+{% block title %}bluecollarbi | Cloud Services{% endblock %}
+
+{% block body %}
+
+<!-- Main -->
+<div id="main" class="wrapper style1">
+    <div class="container">
+        <header class="major">
+            <h2>Cloud Services</h2>
+            <p>Cloud hosting services for web applications and data</p>
+        </header>
+
+        <!-- Content -->
+            <section id="content">
+                <a href="#" class="image fit"><img src="{% static 'img/cloud.png' %}" alt="" /></a>
+                <h3 class="centerElement">Cloud Infrastructure</h3>
+                <p>Moving your infrastructure to the cloud can give a company a huge advantage when it comes to upkeep, pricing, and scalability. I have experience with AWS, Azure, and Heroku for hosting different web services. AWS or Azure can be an affordable way to run web services online that scale efficiently to the need of the product, and can also include security, load balancers, and data storage.</p>
+                <h3 class="centerElement">Data Storage</h3>
+                <p>Moving your data to the cloud can also help with availability and persistence with backups. I can help you store your data in the cloud, complete with help to manage and create the database, run queries to view the data, and move the data from your current areas to a safe and reliable new location in the cloud.</p>
+            </section>
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock body %}

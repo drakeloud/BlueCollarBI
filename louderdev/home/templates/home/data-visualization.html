@@ -1,0 +1,39 @@
+{% extends 'home.base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+
+
+{% block head %}
+<link href="{% static 'css/home.css' %}" rel="stylesheet">
+{% endblock head %}
+
+{% block title %}bluecollarbi | Data Visualization{% endblock %}
+
+{% block body %}
+
+<!-- Main -->
+<div id="main" class="wrapper style1">
+    <div class="container">
+        <header class="major">
+            <h2>Data Visualization</h2>
+            <p>Visualizing Data to Find Better Understand Your Data as a Whole</p>
+        </header>
+
+        <!-- Content -->
+            <section id="content">
+                <a href="#" class="image fit"><img src="{% static 'img/dataVis.png' %}" alt="" /></a>
+                <h3 class="centerElement">Data Visualized</h3>
+                <p>Data visualized can help show new insight into a companies organization that has not been seen before. I use Tableau and PowerBI to transform data into useable information that can be visually consumed for a better analysis.</p>
+                <p>Finally transform all of the data that you are collecting into something of worth. Make <span class="blueHighlight">Data Driven Decisions</span> to better impact the company.</p>
+
+            </section>
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock body %}

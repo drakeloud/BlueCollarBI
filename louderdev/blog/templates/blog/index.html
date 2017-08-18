@@ -1,0 +1,36 @@
+{% extends 'home.base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+
+
+{% block head %}
+
+{% endblock head %}
+
+{% block title %}bluecollarbi | Blog{% endblock %}
+
+{% block body %}
+
+<!-- Main -->
+<div id="main" class="wrapper style1">
+    <div class="container">
+        <header class="major">
+            <h2>Blog Home</h2>
+            <p>Posts about Technology, Information Systems, and other similar topics.</p>
+        </header>
+
+        <!-- Content -->
+            <section id="content">
+                <a href="#" class="image fit"><img src="{% static 'img/letters.png' %}" alt="" /></a>
+                <h3>Recent Blog Posts:</h3>
+            </section>
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock body %}

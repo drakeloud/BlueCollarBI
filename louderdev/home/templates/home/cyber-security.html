@@ -1,0 +1,58 @@
+{% extends 'home.base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+
+
+{% block head %}
+<link href="{% static 'css/home.css' %}" rel="stylesheet">
+{% endblock head %}
+
+{% block title %}bluecollarbi | Cyber Security{% endblock %}
+
+{% block body %}
+
+<!-- Main -->
+<div id="main" class="wrapper style1">
+    <div class="container">
+        <header class="major">
+            <h2>Cyber Security</h2>
+            <p>Cyber Security solutions for training, security awareness, and cyber governance</p>
+        </header>
+
+        <!-- Content -->
+            <section id="content">
+                <a href="#" class="image fit"><img src="{% static 'img/security.png' %}" alt="" /></a>
+                <h3 class="centerElement">Phishing</h3>
+                <p>The biggest security threat to your organization are the people. Attackers commonly send crafted emails to trick users to open up links or other attachments inside of emails. When a user opens up the link, malware or other malicious content can be downloaded to the user’s machine. This can allow the attacker to gain access to the user’s machine and possibly the user’s entire company.</p>
+                <p>The best way to learn cyber security, is to actively participate. I set up a phishing campaign service that I can use to run phishing campaigns for an organization.</p>
+                <p>These campaigns show senior leadership statistics of how well the employees react to cyber threats and also help train the employees through actual tests so that they are more cyber conscious when a real attack comes.</p>
+                <ul>
+                    <li>Reports of how well employees evade phishing attacks</li>
+                    <li>Train through real phishing campaigns</li>
+                    <li>Gain better understanding of phishing and its effect on an organization</li>
+                </ul>
+                <h3 class="centerElement">Cyber Governance - 2017 AIS case study</h3>
+                <p>Green Star Bank in Michigan recently lost $1.2 million due to fraudulent transfers. These transfers were successful because of poor processes inside of the organization and because of a spear phishing campaign that targeted bank employees.</p>
+                <p>I helped lead a team of 5 to create recommendations and policies based on the COBIT 5 methodology of preventative, detective, and corrective controls. A summary of these recommendations can be viewed in the video: Additionally, the full report of our recommendations and policies can be viewed at the link below:</p>
+                <p class="centerElement">
+                    <a href="{% static 'file/SecurityReport2017.pdf' %}" class="button" download>Download full report</a>
+                </p>  
+                <p>Our team was awarded first place at the Association for Information Systems international security competition.</p>
+                <h3 class="centerElement">Cyber Governance - 2016 AIS case study</h3>
+                <p>NOLA Life is a mutual insurance company that employs field agents to gather sensitive data from their clients. The data in transmission and at rest must be properly protected as it must remain HIPAA compliant.</p>
+                <p>I helped formulate and create the recommendations for NOLA life to harden and secure their system. Our recommendations include the hardware, software, transmission protocols, and user processes of the secure system.</p>
+                <p>Our team was awarded first place at the Association for Information Systems international security competition.</p>
+                <p class="centerElement">
+                    <a href="{% static 'file/SecurityReport2016.pdf' %}" class="button" download>Download full report</a>
+                </p>  
+            </section>
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock body %}

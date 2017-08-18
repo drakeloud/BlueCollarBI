@@ -1,0 +1,129 @@
+{% extends 'home.base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+
+
+{% block head %}
+<link href="{% static 'css/home.css' %}" rel="stylesheet">
+{% endblock head %}
+
+{% block title %}bluecollarbi | Services{% endblock %}
+
+{% block body %}
+
+<!-- Main -->
+<div id="main" class="wrapper style1">
+    <div class="container">
+        <header class="major">
+            <h2>Services</h2>
+            <p>Add business value by implementing the following technologies in your organization:</p>
+        </header>
+        <div class="box alt">
+			<div class="row uniform">
+				<section class="6u 6u(medium) 12u$(xsmall)">
+                    <div class="row">
+                        <div class="3u">
+                            <span class="icon alt major fa-desktop"></span>
+                        </div>
+                        <div class="9u">
+                            <h3 class="blueText" id="webDev">Web Development</h3>
+                            <p>Want an employee who works 24/7 to market your site? That employee is your website.</p>
+                            <p>bluecollarbi specializes in web development solutions from simple CMS solutions to more complex business logic with a full backend product to manage your web experience. Inquire today to get a quote!</p>
+                            <p><span class="redText">Technologies:</span> HTML5, CSS3, JS, jQuery, C# & ASP.Net, Python & Django, Wordpress</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="6u$ 6u(medium) 12u$(xsmall)">
+                    <div class="row">
+                        <div class="3u">
+                            <span class="icon alt major fa-cloud"></span>
+                        </div>
+                        <div class="9u">
+                            <h3 class="blueText"  id="cloud">Cloud</h3>
+                            <p>The reliability and accessibility of the cloud is closer than you think.</p>
+                            <p>bluecollarbi can not only host and manage your website on the cloud, but we also specialize in data storage and cloud computing. Access your important data, anywhere, anytime from the cloud, and don't worry about backups again!</p>
+                            <p><span class="redText">Technologies:</span> Amazon Web Services, Microsoft Azure, Heroku</p>    
+                        </div>
+                    </div>
+                </section>
+                <section class="6u 6u(medium) 12u$(xsmall)">
+                    <div class="row">
+                        <div class="3u">
+                            <span class="icon alt major fa-flask"></span>
+                        </div>
+                        <div class="9u">
+                            <h3 class="blueText" id="predAnalytics">Predictive Analytics</h3>
+                            <p>Finally let machine learning upgrade your data from prescriptive to predictive</p>
+                            <p>bluecollarbi can help you use your data in new and powerful ways. Sample, partition, and predict using your data to get more accurate results and forecasts from the data that you already collect.</p>
+                            <p><span class="redText">Technologies:</span> Microsoft Machine Learning Studio, Python, R</p>    
+                        </div>
+                    </div>
+                </section>
+                <section class="6u$ 6u(medium) 12u$(xsmall)">
+                    <div class="row">
+                        <div class="3u">
+                            <span class="icon alt major fa-area-chart"></span>
+                        </div>
+                        <div class="9u">
+                            <h3 class="blueText" id="dataVis">Data Visualization</h3>
+                            <p>Powerful interactive dashboards to find new insight and make data driven decisions are not just for fortune 500 companies.</p>
+                            <p>Find new trends and patterns by visualizing your data with an interactive dashboard. bluecollarbi can help move your data through the process of ETL to get your data together so that you can gain the insight you need to make data driven decisions.</p>
+                            <p><span class="redText">Technologies:</span> Tableau, PowerBI, Python, R, Excel</p>    
+                        </div>
+                    </div>
+                </section>
+                <section class="6u 6u(medium) 12u$(xsmall)">
+                    <div class="row">
+                        <div class="3u">
+                            <span class="icon alt major fa-lock"></span>
+                        </div>
+                        <div class="9u">
+                            <h3 class="blueText" id="cyber">Cyber Security</h3>
+                            <p>Millions of phishing emails are sent every year - Is your company prepared?</p>
+                            <p>bluecollarbi can run phishing campaigns to test your employees and give high level reports of the success rates. In addition, Phishing training accompanies every phishing campaign so employees can know how to improve themselves.</p>
+                            <p><span class="redText">Technologies:</span> Open Source tools, Kali, Bash, Linux</p>    
+                        </div>
+                    </div>
+                </section>
+                <section class="6u$ 6u(medium) 12u$(xsmall)">
+                    <div class="row">
+                        <div class="3u">
+                            <span class="icon alt major fa-keyboard-o"></span>
+                        </div>
+                        <div class="9u">
+                            <h3 class="blueText" id="automation">Automation</h3>
+                            <p>Let computers do the boring work, so you can focus on your core services!</p>
+                            <p>bluecollarbi can automate tasks such as data entry or excel sheet manipulation so that these tasks are not only done more efficiently, but also done more accurately by eliminating human error.</p>
+                            <p><span class="redText">Technologies:</span> VBA, Python, Powershell, Bash, Excel</p>    
+                        </div>
+                    </div>
+                </section>
+			</div>
+		</div>
+
+    </div>
+</div>
+<section class="wrapper styleBlue special fade">
+		<div class="container">
+			<header>
+				<h2>Contact me</h2>
+				<p>Interested in learning more? Send a hello here!</p>
+			</header>
+			<form class="container 50%">
+				<div class="row uniform 50%">
+                    <ul class="icons centerElement">
+						<li><a href="https://twitter.com/DrakeLoud" class="icon whiteTextFA fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.linkedin.com/in/drakeloud/" class="icon whiteTextFA fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/drakeloud" class="icon whiteTextFA fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</div>
+			</form>
+		</div>
+</section>
+
+
+
+
+
+{% endblock body %}
