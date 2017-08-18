@@ -1,7 +1,6 @@
 import dj_database_url
 from decouple import Csv, config
 from unipath import Path
-# from bluecollarbi.config import *
 import os
 
 SECRET_KEY = os.environ['SECRET_KEY']
@@ -9,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_DIR = Path(__file__).parent
 
 if 'RDS_DB_NAME' in os.environ:
-    ALLOWED_HOSTS = ['bluecollarbi-dev.us-west-2.elasticbeanstalk.com']
+    ALLOWED_HOSTS = ['','www.bluecollarbi.com','bluecollarbi.com']
     DEBUG = False
     DATABASES = {
         'default': {
@@ -27,7 +26,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'postgres',
+            'NAME': 'postgres2',
             'USER': 'Drake',
             'PASSWORD': 'password',
             'HOST': 'localhost',
