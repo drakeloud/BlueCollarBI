@@ -1925,6 +1925,10 @@
 			color: #00ffcc;
 		}
 
+		.icon.white {
+			color: white;
+		}
+
 		.icon.style2 {
 			color: #00f0ff;
 		}
@@ -2641,7 +2645,7 @@
 		}
 
 		.wrapper.style1 {
-			background-color: #21b2a6;
+			background-color: #6CA0DC;
 			color: #c7ebe8;
 		}
 
@@ -3160,7 +3164,7 @@
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
+		background: #2F62A4;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
