@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.shortcuts import redirect, render
 
 from bluecollarbi.authentication.forms import SignUpForm
-from bluecollarbi.feeds.models import Feed
+# from bluecollarbi.feeds.models import Feed
 
 
 def signup(request):

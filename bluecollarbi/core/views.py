@@ -9,8 +9,6 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.shortcuts import get_object_or_404, redirect, render
 
 from bluecollarbi.core.forms import ChangePasswordForm, ProfileForm
-from bluecollarbi.feeds.models import Feed
-from bluecollarbi.feeds.views import FEEDS_NUM_PAGES, feeds
 from PIL import Image
 
 # def home(request):
@@ -18,7 +16,7 @@ from PIL import Image
 
 def profilehome(request):
     if request.user.is_authenticated():
-        return feeds(request)
+        return render(request, '/')
     else:
         return render(request, 'core/cover.html')
 

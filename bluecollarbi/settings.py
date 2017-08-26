@@ -41,16 +41,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-    'bluecollarbi.activities',
-    'bluecollarbi.articles',
     'bluecollarbi.authentication',
     'bluecollarbi.core',
-    'bluecollarbi.feeds',
-    'bluecollarbi.messenger',
-    'bluecollarbi.questions',
-    'bluecollarbi.search',
     'bluecollarbi.home',
-    'bluecollarbi.blog',
 )
 
 MIDDLEWARE_CLASSES = (

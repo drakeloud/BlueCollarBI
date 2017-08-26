@@ -10,8 +10,6 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.utils.encoding import python_2_unicode_compatible
 
-from bluecollarbi.activities.models import Notification
-
 
 @python_2_unicode_compatible
 class Profile(models.Model):
