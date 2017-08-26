@@ -19,7 +19,7 @@
 							<div id="menu">
 								<ul>
 									{% if user.is_authenticated %}
-									<li>Welcome {{ user.profile.get_screen_name }}
+									<li>Welcome {{ user.profile.get_screen_name|title}}
 									{% endif %}
 									<li><a href="/">Home</a></li>
 									<li><a href="/home/about.html">About</a></li>

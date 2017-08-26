@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'bluecollarbi.authentication',
     'bluecollarbi.core',
     'bluecollarbi.home',
+    'bluecollarbi.data',
 )
 
 MIDDLEWARE_CLASSES = (
