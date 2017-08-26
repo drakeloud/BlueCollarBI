@@ -11,9 +11,6 @@ from django.shortcuts import get_object_or_404, redirect, render
 from bluecollarbi.core.forms import ChangePasswordForm, ProfileForm
 from PIL import Image
 
-# def home(request):
-#     return render(request, 'core/home.html')
-
 def profilehome(request):
     if request.user.is_authenticated():
         return render(request, '/')

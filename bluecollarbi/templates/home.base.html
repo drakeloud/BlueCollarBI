@@ -20,8 +20,18 @@
 								<ul>
 									<li><a href="/">Home</a></li>
 									<li><a href="/home/about.html">About</a></li>
+									
+									{% if user.is_authenticated %}
+									<li><a href="#">Dashboard Home</a></li>
+									<li><a href="#">Submit New Test</a></li>
+									<li><a href="/logout">Log Out</a></li>
+									
+									{% else %}
+
 									<li><a href="/signup">Sign Up</a></li>
 									<li><a href="/login">Log In</a></li>
+
+									{% endif %}
 								</ul>
 							</div>
 						</li>

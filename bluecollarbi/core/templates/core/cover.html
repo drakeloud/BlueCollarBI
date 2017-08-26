@@ -19,26 +19,26 @@
       {% endfor %}
     {% endif %}
     <div class="login">
-      <h2>{% trans 'Log in' %}</h2>
+      <h2>Log in</h2>
       <form method="post" action="{% url 'login' %}" role="form">
         {% csrf_token %}
         <div class="form-group{% if form.username.errors %} has-error{% endif %}">
-          <label for="username">{% trans 'Username' %}</label>
+          <label for="username">Username</label>
           <input type="text" class="form-control" id="username" name="username">
           {% for error in form.username.errors %}
             <label class="control-label">{{ error }}</label>
           {% endfor %}
         </div>
         <div class="form-group{% if form.password.errors %} has-error{% endif %}">
-          <label for="password">{% trans 'Password' %}</label>
+          <label for="password">Password</label>
           <input type="password" class="form-control" id="password" name="password">
           {% for error in form.password.errors %}
             <label class="control-label">{{ error }}</label>
           {% endfor %}
         </div>
         <div class="form-group">
-          <button type="submit" class="button">{% trans 'Log in' %}</button>
-          <a href="{% url 'signup' %}" class="btn btn-link blueText">{% trans 'Sign up for bluecollarbi' %}</a>
+          <button type="submit" class="button">Log in</button>
+          <a href="{% url 'signup' %}" class="btn btn-link blueText">Sign up for Blue Collar BI</a>
         </div>
       </form>
     </div>
