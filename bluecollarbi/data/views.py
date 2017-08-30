@@ -5,12 +5,12 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.template.loader import render_to_string
 
 
-def home(request):
-    return render(request, 'home/index.html')
+def index(request):
+    return render(request, 'data/index.html')
 
-def elements(request):
-    return render(request, 'home/elements.html')
+def analysis(request):
+    return render(request, 'data/analysis.html')
 
-def about(request):
-    return render(request, 'home/about.html')
+def submit(request):
+    return render(request, 'data/submit.html')
 

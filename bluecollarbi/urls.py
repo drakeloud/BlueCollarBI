@@ -10,6 +10,7 @@ from bluecollarbi.home import views as home_views
 urlpatterns = [
     url(r'^$', home_views.home, name='home'),
     url(r'^home/', include('bluecollarbi.home.urls')),
+    url(r'^data/', include('bluecollarbi.data.urls')),
     url(r'^login', auth_views.login, {'template_name': 'core/cover.html'},
         name='login'),
     url(r'^logout', auth_views.logout, {'next_page': '/'}, name='logout'),

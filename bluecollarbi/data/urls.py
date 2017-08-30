@@ -1,9 +1,9 @@
 from django.conf.urls import url
 
-from bluecollarbi.home import views
+from bluecollarbi.data import views
 
 urlpatterns = [
-    url(r'^$', views.home, name='home'),
-    url(r'^about', views.about, name='about'),
-    url(r'^elements', views.elements, name='elements'),
+    url(r'^index', views.index, name='index'),
+    url(r'^submit', views.submit, name='submit'),
+    url(r'^analysis', views.analysis, name='analysis'),
 ]
