@@ -1,0 +1,51 @@
+{% extends 'home.base.html' %}
+{% load staticfiles %}
+
+
+
+
+{% block head %}
+<link href="{% static 'css/data.css' %}" rel="stylesheet">
+{% endblock head %}
+
+{% block title %}BlueCollarBI | Submit Barrier Post Pour{% endblock %}
+
+{% block body %}
+
+<!-- Main -->
+<article id="main">
+    <header>
+        <h2>Barrier Post Pour</h2>
+    </header>
+    <section class="wrapper style5">
+        <div class="inner">
+            <form method="post" action="#">
+                <div class="row uniform">
+                
+                    <div class="6u 12u$(xsmall)">
+                        <label>Batch Weights & Water Cement Ratio</label>
+                        <input type="email" name="demo-email" id="demo-email" value="" />
+                    </div>
+
+
+
+                    <div class="12u$">
+                        <hr />
+                        
+                    </div>
+                    <!-- Submit -->
+                    <div class="12u$">
+                        <ul class="actions">
+                            <li><input type="submit" value="Submit" class="special" /></li>
+                            <li><input type="reset" value="Reset" /></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </form>
+        </div>  
+    </section>
+</article>
+
+
+{% endblock body %}

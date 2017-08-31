@@ -14,3 +14,11 @@ def analysis(request):
 def submit(request):
     return render(request, 'data/submit.html')
 
+def forms(request):
+    return render(request, 'data/forms.html')
+
+def UDOTPrecastReport(request):
+    return render(request, 'data/UDOTPrecastReport.html')
+
+def barrierPostPour(request):
+    return render(request, 'data/barrierPostPour.html')
