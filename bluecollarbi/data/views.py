@@ -1,24 +1,23 @@
-from django.contrib.auth.decorators import login_required
-from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
-from django.http import HttpResponse, HttpResponseBadRequest
-from django.shortcuts import get_object_or_404, redirect, render
-from django.template.loader import render_to_string
+from django.shortcuts import render
+from django.template import loader
+from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, 'data/index.html')
+    context = {}
+    template = loader.get_template('data/index.html')
+    return HttpResponse(template.render(context, request))
 
-def analysis(request):
-    return render(request, 'data/analysis.html')
+def form(request):
+    return render(request, 'data/form.html')
 
-def submit(request):
-    return render(request, 'data/submit.html')
+def gentella_html(request):
+    context = {}
+    # The template to be loaded as per gentelella.
+    # All resource paths for gentelella end in .html.
 
-def forms(request):
-    return render(request, 'data/forms.html')
+    # Pick out the html file name from the url. And load that template.
+    load_template = request.path.split('/')[-1]
+    template = loader.get_template('data/' + load_template)
+    return HttpResponse(template.render(context, request))
 
-def UDOTPrecastReport(request):
-    return render(request, 'data/UDOTPrecastReport.html')
-
-def barrierPostPour(request):
-    return render(request, 'data/barrierPostPour.html')
