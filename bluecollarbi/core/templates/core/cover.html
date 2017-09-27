@@ -1,46 +1,57 @@
-{% extends 'user.base.html' %}
+{% extends 'login.base.html' %}
 {% load staticfiles %}
 
 
 {% block head %}
-  <link href="{% static 'css/cover.css' %}" rel="stylesheet">
+
 {% endblock head %}
 
 {% block body %}
-  
-    <div class="cover">
-    <h2 class="logoText logo"><span class="blueText">LOUD</span>ERdEV</h2>
-    {% if form.non_field_errors %}
-      {% for error in form.non_field_errors %}
-        <div class="alert alert-danger alert-dismissable">
-          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-          {{ error }}
-        </div>
-      {% endfor %}
-    {% endif %}
-    <div class="login">
-      <h2>Log in</h2>
-      <form method="post" action="{% url 'login' %}" role="form">
-        {% csrf_token %}
-        <div class="form-group{% if form.username.errors %} has-error{% endif %}">
-          <label for="username">Username</label>
-          <input type="text" class="form-control" id="username" name="username">
-          {% for error in form.username.errors %}
-            <label class="control-label">{{ error }}</label>
-          {% endfor %}
-        </div>
-        <div class="form-group{% if form.password.errors %} has-error{% endif %}">
-          <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" name="password">
-          {% for error in form.password.errors %}
-            <label class="control-label">{{ error }}</label>
-          {% endfor %}
-        </div>
-        <div class="form-group">
-          <button type="submit" class="button">Log in</button>
-          <a href="{% url 'signup' %}" class="btn btn-link blueText">Sign up for Blue Collar BI</a>
-        </div>
-      </form>
-    </div>
-  </div>
+<section id="banner">
+	<div class="inner">
+    <div class="box alt">
+			<div class="row uniform">
+        <section class="2u 2u(medium) 12u$(xsmall)">
+
+        </section>
+				<section class="8u 8u(medium) 12u$(xsmall)">
+          <h2>Login</h2>
+          
+				</section>
+			</div>
+		</div>
+	</div>
+</section>
+    {% comment %} <div class="cover">
+      {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+              <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                {{ error }}
+              </div>
+            {% endfor %}
+          {% endif %}
+          <form method="post" action="{% url 'login' %}" role="form">
+              {% csrf_token %}
+              <div class="form-group{% if form.username.errors %} has-error{% endif %}">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username">
+                {% for error in form.username.errors %}
+                  <label class="control-label">{{ error }}</label>
+                {% endfor %}
+              </div>
+              <div class="form-group{% if form.password.errors %} has-error{% endif %}">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password">
+                {% for error in form.password.errors %}
+                  <label class="control-label">{{ error }}</label>
+                {% endfor %}
+              </div>
+              <div class="form-group">
+                <button type="submit" class="button">Log in</button>
+                <a href="{% url 'signup' %}" class="btn btn-link blueText">Sign up for Blue Collar BI</a>
+              </div>
+            </form>
+
+  </div> {% endcomment %}
 {% endblock body %}
