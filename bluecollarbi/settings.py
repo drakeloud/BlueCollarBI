@@ -3,7 +3,7 @@ from decouple import Csv, config
 from unipath import Path
 import os
 
-SECRET_KEY = os.environ['SECRET_KEY']
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_DIR = Path(__file__).parent
 
@@ -20,6 +20,7 @@ if 'RDS_DB_NAME' in os.environ:
             'PORT': os.environ['RDS_PORT'],
         }
     }
+    SECRET_KEY = os.environ['SECRET_KEY']
 else:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
     DEBUG = True
@@ -33,6 +34,7 @@ else:
             'PORT': 5432
         }
     }
+    SECRET_KEY = 'h2^9h(5#demdz@p!$fchwog)@bic3=0x#veqtw1d@_&zl%65hv'
 
 INSTALLED_APPS = (
     'django.contrib.auth',

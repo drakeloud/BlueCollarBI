@@ -2,13 +2,10 @@ from django.conf.urls import url
 from bluecollarbi.data import views
 
 urlpatterns = [
-    # Matches any html file - to be used for gentella
-    # Avoid using your .html in your resources.
-    # Or create a separate django app.
-    
     url(r'^index', views.index, name='index'),
-
-    # url(r'^form', views.form, name='form'),
-    url(r'^.*\.html', views.gentella_html, name='gentella'),
-    
+    url(r'^submit', views.submit, name='submit'),
+    url(r'^analysis', views.analysis, name='analysis'),
+    url(r'^forms', views.forms, name='forms'),
+    url(r'^UDOTPrecastReport', views.UDOTPrecastReport, name='UDOTPrecastReport'),
+    url(r'^barrierPostPour', views.barrierPostPour, name='barrierPostPour'),
 ]
