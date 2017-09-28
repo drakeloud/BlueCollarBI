@@ -12,58 +12,33 @@
     <div class="login-page">
         <h2 class="center">BLUE COLLAR BI</h2>
         <div class="form">
-          <form class="login-form">
-            <input type="text" placeholder="username"/>
-            <input type="password" placeholder="password"/>
-            <a class="button special">login</a>
+          <form class="login-form" method="post" action="{% url 'login' %}" role="form">
+            {% if form.non_field_errors %}
+              {% for error in form.non_field_errors %}
+                <label>
+                  {{ error }}
+                </label>
+              {% endfor %}
+            {% endif %}
+
+            {% csrf_token %}
+            <div class="form-group{% if form.username.errors %} has-error{% endif %}">
+              <input type="text" placeholder="username" class="form-control formSpacing" id="username" name="username">
+              {% for error in form.username.errors %}
+                <label>{{ error }}</label>
+              {% endfor %}
+            </div>
+            <div class="form-group{% if form.password.errors %} has-error{% endif %}">
+              <input type="password" placeholder="password" class="form-control formSpacing" id="password" name="password">
+              {% for error in form.password.errors %}
+                <label>{{ error }}</label>
+              {% endfor %}
+            </div>
+            <button class="button special" type="submit">login</button>
             <p class="message">Not registered? <a href="/signup">Create an account</a></p>
           </form>
         </div>
       </div>
-	{% comment %} <div class="inner">
-    <div class="box alt">
-			<div class="row uniform">
-        <section class="2u 2u(medium) 12u$(xsmall)">
-
-        </section>
-				<section class="8u 8u(medium) 12u$(xsmall)">
-          <h2>Login</h2>
-          
-				</section>
-			</div>
-		</div>
-	</div> {% endcomment %}
 </section>
-    {% comment %} <div class="cover">
-      {% if form.non_field_errors %}
-            {% for error in form.non_field_errors %}
-              <div class="alert alert-danger alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                {{ error }}
-              </div>
-            {% endfor %}
-          {% endif %}
-          <form method="post" action="{% url 'login' %}" role="form">
-              {% csrf_token %}
-              <div class="form-group{% if form.username.errors %} has-error{% endif %}">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" name="username">
-                {% for error in form.username.errors %}
-                  <label class="control-label">{{ error }}</label>
-                {% endfor %}
-              </div>
-              <div class="form-group{% if form.password.errors %} has-error{% endif %}">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password">
-                {% for error in form.password.errors %}
-                  <label class="control-label">{{ error }}</label>
-                {% endfor %}
-              </div>
-              <div class="form-group">
-                <button type="submit" class="button">Log in</button>
-                <a href="{% url 'signup' %}" class="btn btn-link blueText">Sign up for Blue Collar BI</a>
-              </div>
-            </form>
 
-  </div> {% endcomment %}
 {% endblock body %}
