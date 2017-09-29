@@ -1,30 +1,70 @@
-{% extends 'user.base.html' %}
+{% extends 'login.base.html' %}
+{% load staticfiles %}
 
-{% load staticfiles i18n %}
 
 {% block head %}
-  <link href="{% static 'css/signup.css' %}" rel="stylesheet">
+
 {% endblock head %}
 
 {% block body %}
+<section id="banner">
+    <div class="login-page">
+        <h2 class="center">BLUE COLLAR BI</h2>
+        <div class="form">
+          <form class="login-form" method="post" action="{% url 'signup' %}" role="form">
+
+            {% csrf_token %}
+
+            {% for field in form.visible_fields %}
+            <div class="form-group{% if field.errors %} has-error{% endif %}">
+              {{ field }}
+              {% if field.help_text %}
+                <span class="help-block">{{ field.help_text|safe }}</span>
+              {% endif %}
+              {% for error in field.errors %}
+                <label class="control-label">{{ error }}</label>
+              {% endfor %}
+            </div>
+            {% endfor %}
+
+
+            {% comment %} <div class="form-group{% if form.username.errors %} has-error{% endif %}">
+              <input type="text" placeholder="username" class="form-control formSpacing" id="username" name="username">
+              {% for error in form.username.errors %}
+                <label>{{ error }}</label>
+              {% endfor %}
+            </div>
+            <div class="form-group{% if form.password.errors %} has-error{% endif %}">
+              <input type="password" placeholder="password" class="form-control formSpacing" id="password" name="password">
+              {% for error in form.password.errors %}
+                <label>{{ error }}</label>
+              {% endfor %}
+            </div> {% endcomment %}
+
+            
+            <button class="button special" type="submit">Create Account</button>
+            <p class="message">Already registered? <a href="/login">Login to your account</a></p>
+          </form>
+        </div>
+      </div>
+</section>
+
+{% endblock body %}
+
+
+
+{% comment %} {% block body %}
   <h2 class="logoText logo"><a href="/home/index.html"><span class="blueText">LOUD</span>ERdEV</a></h2>
   <div class="signup">
     <h2>{% trans 'Sign up' %}</h2>
-    <form action="{% url 'signup' %}" method="post" role="form">
+    
+
       {% csrf_token %}
-      {% for field in form.visible_fields %}
-        <div class="form-group{% if field.errors %} has-error{% endif %}">
-          <label for="{{ field.label }}">{{ field.label }}</label>
-          {{ field }}
-          {% if field.help_text %}
-            <span class="help-block">{{ field.help_text|safe }}</span>
-          {% endif %}
-          {% for error in field.errors %}
-            <label class="control-label">{{ error }}</label>
-          {% endfor %}
-        </div>
-      {% endfor %}
+
+
+
+
       <button type="submit" class="button">{% trans 'Create an account' %}</button>
     </form>
   </div>
-{% endblock body %}
+{% endblock body %} {% endcomment %}
