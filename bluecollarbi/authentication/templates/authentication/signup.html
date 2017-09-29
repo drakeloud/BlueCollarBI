@@ -26,22 +26,6 @@
               {% endfor %}
             </div>
             {% endfor %}
-
-
-            {% comment %} <div class="form-group{% if form.username.errors %} has-error{% endif %}">
-              <input type="text" placeholder="username" class="form-control formSpacing" id="username" name="username">
-              {% for error in form.username.errors %}
-                <label>{{ error }}</label>
-              {% endfor %}
-            </div>
-            <div class="form-group{% if form.password.errors %} has-error{% endif %}">
-              <input type="password" placeholder="password" class="form-control formSpacing" id="password" name="password">
-              {% for error in form.password.errors %}
-                <label>{{ error }}</label>
-              {% endfor %}
-            </div> {% endcomment %}
-
-            
             <button class="button special" type="submit">Create Account</button>
             <p class="message">Already registered? <a href="/login">Login to your account</a></p>
           </form>
@@ -50,21 +34,3 @@
 </section>
 
 {% endblock body %}
-
-
-
-{% comment %} {% block body %}
-  <h2 class="logoText logo"><a href="/home/index.html"><span class="blueText">LOUD</span>ERdEV</a></h2>
-  <div class="signup">
-    <h2>{% trans 'Sign up' %}</h2>
-    
-
-      {% csrf_token %}
-
-
-
-
-      <button type="submit" class="button">{% trans 'Create an account' %}</button>
-    </form>
-  </div>
-{% endblock body %} {% endcomment %}
