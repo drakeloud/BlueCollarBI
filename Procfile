@@ -1,1 +1,0 @@
-web: gunicorn bluecollarbi.wsgi --log-file -

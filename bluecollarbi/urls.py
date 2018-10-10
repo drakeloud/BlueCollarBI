@@ -1,30 +1,21 @@
-from django.conf import settings
-from django.conf.urls import include, url
-from django.conf.urls.static import static
-from django.contrib.auth import views as auth_views
+"""bluecollarBI URL Configuration
 
-from bluecollarbi.authentication import views as bluecollarbi_auth_views
-from bluecollarbi.core import views as core_views
-from bluecollarbi.home import views as home_views
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/2.1/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path
 
 urlpatterns = [
-    url(r'^$', home_views.home, name='home'),
-    url(r'^home/', include('bluecollarbi.home.urls')),
-    url(r'^data/', include('bluecollarbi.data.urls')),
-    url(r'^login', auth_views.login, {'template_name': 'core/cover.html'},
-        name='login'),
-    url(r'^logout', auth_views.logout, {'next_page': '/'}, name='logout'),
-    url(r'^signup/$', bluecollarbi_auth_views.signup, name='signup'),
-    url(r'^settings/$', core_views.settings, name='settings'),
-    url(r'^settings/picture/$', core_views.picture, name='picture'),
-    url(r'^settings/upload_picture/$', core_views.upload_picture,
-        name='upload_picture'),
-    url(r'^settings/save_uploaded_picture/$', core_views.save_uploaded_picture,
-        name='save_uploaded_picture'),
-    url(r'^settings/password/$', core_views.password, name='password'),
-
+    path('admin/', admin.site.urls),
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
